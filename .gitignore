@@ -122,6 +122,9 @@ unlinked_spec.ds
 **/linux/flutter/generated_plugin_registrant.h
 **/linux/flutter/generated_plugins.cmake
 
+node_modules/
+
+
 # Coverage
 coverage/
 
