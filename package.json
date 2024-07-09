@@ -2,7 +2,8 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   },
-  "scripts": {
+"scripts": {
   "deploy": "flutter build web --release --web-renderer html --base-href /Begging/ && npx gh-pages -d build/web"
-  }
+}
+
 }
