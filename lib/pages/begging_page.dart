@@ -7,7 +7,8 @@ class BeggingPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Help a Software Engineer!'),
       ),
-      body: SingleChildScrollView(
+      body: ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),child:SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Center(
@@ -46,7 +47,9 @@ class BeggingPage extends StatelessWidget {
                         return AlertDialog(
                           title: Text('Thank You!'),
                           
-                          content: SingleChildScrollView(child: Column(
+                          content: ScrollConfiguration(
+                            behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                            child:SingleChildScrollView(child: Column(
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -69,11 +72,12 @@ class BeggingPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     textStyle: TextStyle(fontSize: 15),
                   ),
-                )
+                ),
+                SizedBox(height: 10),
                             ],
                           ),
                         ),
-                          actions: <Widget>[
+                        ),actions: <Widget>[
                             TextButton(
                               onPressed: () {
                                 Navigator.of(context).pop();
@@ -97,6 +101,6 @@ class BeggingPage extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }
